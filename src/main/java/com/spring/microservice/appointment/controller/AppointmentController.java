@@ -47,10 +47,20 @@ public class AppointmentController {
 	}
 
 	@GetMapping("get/p/{id}")
-	public List<AppointmentDetails> getAppointmentByPatientId(@PathVariable("id") String pid) {
+	public List<AppointmentData> getAppointmentByPatientId(@PathVariable("id") String pid) {
+		List<AppointmentData> appointmentDataList=new ArrayList<AppointmentData>();
 		try {
-			return appoinmentDetailsRepo.findByPATIENT_ID(pid);
-		} catch (Exception x) {
+			List<String> adetails=appoinmentDetailsRepo.findByPATIENT_ID(pid);
+			
+			for(String s:adetails) {
+				String[] splitData=s.split(",");
+				appointmentDataList.add(new AppointmentData(splitData[0],splitData[1],splitData[2],splitData[4],splitData[3],splitData[5].replace("|",","),splitData[6],splitData[7]+"-"+splitData[8],splitData[9]));
+			}
+			
+			return appointmentDataList;
+		} catch (
+
+		Exception x) {
 			return null;
 		}
 	}
@@ -63,7 +73,7 @@ public class AppointmentController {
 			
 			for(String s:adetails) {
 				String[] splitData=s.split(",");
-				appointmentDataList.add(new AppointmentData(splitData[0],splitData[1],splitData[2],splitData[4],splitData[3],splitData[5],splitData[6],splitData[7]+"-"+splitData[8],splitData[9]));
+				appointmentDataList.add(new AppointmentData(splitData[0],splitData[1],splitData[2],splitData[4],splitData[3],splitData[5].replace("|",","),splitData[6],splitData[7]+"-"+splitData[8],splitData[9]));
 			}
 			
 			return appointmentDataList;
@@ -74,10 +84,10 @@ public class AppointmentController {
 		}
 	}
 
-	@PutMapping("update")
-	public String updateAppointment(@RequestBody AppointmentDetails ad) {
+	@PutMapping("update/{id}")
+	public String updateAppointment(@PathVariable("id") String ad) {
 		try {
-			appoinmentDetailsRepo.save(ad);
+			appoinmentDetailsRepo.acceptAppointmentById(ad);
 			return "UPDATE SUCCESSFULLY";
 		} catch (Exception x) {
 			return "UPDATE FAILED";
