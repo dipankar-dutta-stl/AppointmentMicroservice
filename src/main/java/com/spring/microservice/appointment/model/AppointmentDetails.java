@@ -12,6 +12,7 @@ public class AppointmentDetails {
 	private String PATIENT_ID;
 	private String APPOINTMENT_SCHEDULE_ID;
 	private String APPOINTMENT_CONFRIMED;
+	private String TAGS;
 	
 	
 	
@@ -21,15 +22,24 @@ public class AppointmentDetails {
 
 
 
+	
+
+
+
 	public AppointmentDetails(String iD, String dOCTOR_ID, String pATIENT_ID, String aPPOINTMENT_SCHEDULE_ID,
-			String aPPOINTMENT_CONFRIMED) {
+			String aPPOINTMENT_CONFRIMED, String tAGS) {
 		super();
 		ID = iD;
 		DOCTOR_ID = dOCTOR_ID;
 		PATIENT_ID = pATIENT_ID;
 		APPOINTMENT_SCHEDULE_ID = aPPOINTMENT_SCHEDULE_ID;
 		APPOINTMENT_CONFRIMED = aPPOINTMENT_CONFRIMED;
+		TAGS = tAGS;
 	}
+
+
+
+
 
 
 
@@ -90,6 +100,23 @@ public class AppointmentDetails {
 	public void setAPPOINTMENT_CONFRIMED(String aPPOINTMENT_CONFRIMED) {
 		APPOINTMENT_CONFRIMED = aPPOINTMENT_CONFRIMED;
 	}
+	
+	
+
+
+	public String getTAGS() {
+		return TAGS;
+	}
+
+
+
+	public void setTAGS(String tAGS) {
+		TAGS = tAGS;
+	}
+
+
+
+
 
 
 
@@ -97,9 +124,10 @@ public class AppointmentDetails {
 	public String toString() {
 		return "AppointmentDetails [ID=" + ID + ", DOCTOR_ID=" + DOCTOR_ID + ", PATIENT_ID=" + PATIENT_ID
 				+ ", APPOINTMENT_SCHEDULE_ID=" + APPOINTMENT_SCHEDULE_ID + ", APPOINTMENT_CONFRIMED="
-				+ APPOINTMENT_CONFRIMED + "]";
+				+ APPOINTMENT_CONFRIMED + ", TAGS=" + TAGS + "]";
 	}
-	
+
+
 	
 	
 	

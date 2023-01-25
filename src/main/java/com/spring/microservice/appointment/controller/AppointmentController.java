@@ -54,7 +54,7 @@ public class AppointmentController {
 			
 			for(String s:adetails) {
 				String[] splitData=s.split(",");
-				appointmentDataList.add(new AppointmentData(splitData[0],splitData[1],splitData[2],splitData[4],splitData[3],splitData[5].replace("|",","),splitData[6],splitData[7]+"-"+splitData[8],splitData[9]));
+				appointmentDataList.add(new AppointmentData(splitData[0],splitData[1],splitData[2],splitData[4],splitData[3],splitData[5].replace("|",","),splitData[6],splitData[7]+"-"+splitData[8],splitData[9],splitData[10]));
 			}
 			
 			return appointmentDataList;
@@ -73,7 +73,7 @@ public class AppointmentController {
 			
 			for(String s:adetails) {
 				String[] splitData=s.split(",");
-				appointmentDataList.add(new AppointmentData(splitData[0],splitData[1],splitData[2],splitData[4],splitData[3],splitData[5].replace("|",","),splitData[6],splitData[7]+"-"+splitData[8],splitData[9]));
+				appointmentDataList.add(new AppointmentData(splitData[0],splitData[1],splitData[2],splitData[4],splitData[3],splitData[5].replace("|",","),splitData[6],splitData[7]+"-"+splitData[8],splitData[9],splitData[10]));
 			}
 			
 			return appointmentDataList;

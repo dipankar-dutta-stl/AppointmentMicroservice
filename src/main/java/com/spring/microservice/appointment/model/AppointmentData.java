@@ -15,13 +15,16 @@ public class AppointmentData {
 	private String A_TIME;
 	
 	private String APPOINTMENT_CONFRIMED;
+	private String TAGS;
 
 	public AppointmentData() {
 		
 	}
 
+	
+
 	public AppointmentData(String aPPOINTMENT_ID, String fIRST_NAME, String lAST_NAME, String eMAIL, String mOBILE_NO,
-			String aDDRESS, String a_DAY, String a_TIME, String aPPOINTMENT_CONFRIMED) {
+			String aDDRESS, String a_DAY, String a_TIME, String aPPOINTMENT_CONFRIMED, String tAGS) {
 		super();
 		APPOINTMENT_ID = aPPOINTMENT_ID;
 		FIRST_NAME = fIRST_NAME;
@@ -32,7 +35,10 @@ public class AppointmentData {
 		A_DAY = a_DAY;
 		A_TIME = a_TIME;
 		APPOINTMENT_CONFRIMED = aPPOINTMENT_CONFRIMED;
+		TAGS = tAGS;
 	}
+
+
 
 	public String getAPPOINTMENT_ID() {
 		return APPOINTMENT_ID;
@@ -105,6 +111,20 @@ public class AppointmentData {
 	public void setAPPOINTMENT_CONFRIMED(String aPPOINTMENT_CONFRIMED) {
 		APPOINTMENT_CONFRIMED = aPPOINTMENT_CONFRIMED;
 	}
+	
+	
+
+	public String getTAGS() {
+		return TAGS;
+	}
+
+
+
+	public void setTAGS(String tAGS) {
+		TAGS = tAGS;
+	}
+
+
 
 	@Override
 	public String toString() {
