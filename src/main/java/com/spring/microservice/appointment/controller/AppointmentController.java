@@ -30,8 +30,7 @@ public class AppointmentController {
 	@Autowired
 	AppoinmentDetailsRepo appoinmentDetailsRepo;
 
-	@Autowired
-	RestTemplate restTemplate;
+
 
 	@PostMapping("add")
 	public String addAppointment(@RequestBody AppointmentDetails appointmentDetails) {
@@ -92,5 +91,10 @@ public class AppointmentController {
 		} catch (Exception x) {
 			return "UPDATE FAILED";
 		}
+	}
+
+
+	public void generatePDF(){
+
 	}
 }
