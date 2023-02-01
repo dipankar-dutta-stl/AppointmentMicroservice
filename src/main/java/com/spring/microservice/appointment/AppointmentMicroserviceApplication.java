@@ -9,10 +9,9 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 public class AppointmentMicroserviceApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(AppointmentMicroserviceApplication.class, args);
-	}
-	
+    public static void main(String[] args) {
+        SpringApplication.run(AppointmentMicroserviceApplication.class, args);
+    }
 
 
 }
