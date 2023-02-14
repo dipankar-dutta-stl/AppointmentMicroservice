@@ -24,7 +24,7 @@ public interface AppoinmentDetailsRepo extends JpaRepository<AppointmentDetails,
     @Query(value = "UPDATE appointment_details SET appointment_confrimed='CONFRIMED' WHERE id=?", nativeQuery = true)
     public void acceptAppointmentById(String id);
 
-    @Query(value="select id from appointment_details where appointment_schedule_id=?",nativeQuery = true)
+    @Query(value = "select id from appointment_details where appointment_schedule_id=?", nativeQuery = true)
     public String findAppointmentBySlotId(String slotid);
 
 }

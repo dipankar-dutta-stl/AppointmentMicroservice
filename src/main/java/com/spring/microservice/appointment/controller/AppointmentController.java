@@ -99,11 +99,11 @@ public class AppointmentController {
     }
 
     @GetMapping("slot/{id}")
-    public String getAppointmentBySlotId(@PathVariable("id") String id){
-        String appointmentId=appoinmentDetailsRepo.findAppointmentBySlotId(id);
-        if(appointmentId!=null){
+    public String getAppointmentBySlotId(@PathVariable("id") String id) {
+        String appointmentId = appoinmentDetailsRepo.findAppointmentBySlotId(id);
+        if (appointmentId != null) {
             return "FOUND";
-        }else{
+        } else {
             return "NOT FOUND";
         }
 
