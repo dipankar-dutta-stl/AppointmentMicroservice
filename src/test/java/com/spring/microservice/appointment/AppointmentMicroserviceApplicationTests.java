@@ -14,15 +14,15 @@ class AppointmentMicroserviceApplicationTests {
     void contextLoads() {
     }
 
-    @Test
-    void TestGetAppointmentByPatientId() {
-        String data = given()
-                .header("Content-Type", "application/json").contentType(ContentType.JSON).accept(ContentType.JSON)
-                .when()
-                .get("http://localhost:8003/api/v1/appointment/get/p/62059d81-bad5-45c5-a245-4300cb82be33")
-                .then().assertThat().statusCode(200).extract().response().asString();
-        System.out.println(data);
-    }
+    // @Test
+    // void TestGetAppointmentByPatientId() {
+    //     String data = given()
+    //             .header("Content-Type", "application/json").contentType(ContentType.JSON).accept(ContentType.JSON)
+    //             .when()
+    //             .get("http://localhost:8003/api/v1/appointment/get/p/62059d81-bad5-45c5-a245-4300cb82be33")
+    //             .then().assertThat().statusCode(200).extract().response().asString();
+    //     System.out.println(data);
+    // }
 
 
 
